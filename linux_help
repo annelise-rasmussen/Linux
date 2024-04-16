@@ -1,0 +1,124 @@
+1. ls  - checking folders in current directory -l will a long list format to help you see permissions
+
+2. pwd - gives you your current working directory 
+
+3. cd - moves you in and out of directories eg cd documents
+
+4. mkdir- makes a directory or folder within your current working directory 
+
+5. mv - moves files or directories to different directories 
+
+6. cp - copies a file
+
+7. rm - removes or deleted files or directories. It is difficult to recover after deletion, especially for those without a recycle bin set up on their system .
+
+8. touch - changes file access and modifies timestamps. If the file doesn't exist that you are looking for, it will create a new one
+
+9. ln - creates links between files, either hard or symbolic. All files are hard links by default  but creating a link allows you to have multiple names for a file.
+Symlinks are very useful for creating shortcuts and managing files and directories located in different parts of the file system.
+They also retain their link even if the target is moved or renamed, as long as it remains within the same filesystem
+
+10. clear - clears your terminal screen 
+
+11. cat - concatenates or combines files eg. cat file1.txt file2.txt > combined.txt
+
+12. echo -  is used for displaying simple text or variable values, debugging scripts, and concatenating elements into files using redirection
+eg. echo "Sample text" > file.txt
+
+13. less - used to read large files in chunks instead of all at once
+
+14. man - displays commands available 
+
+15. uname - prints available system information such as processor, operating system and hardware
+
+16. whoami - tells you if you are operating as root or another user in the terminal 
+
+17. tar - useful for creating backups and archiving files
+
+18. grep - searches for patterns in your data
+     -i: Ignores case (i.e., treats uppercase and lowercase as equivalent). 
+     -v: Inverts the match, so it shows only the lines that do not match the pattern.
+     -n: Displays the line number along with the text of each matching line.
+     -r or -R: Recursively search through directories.
+     -E: Allows the use of extended regular expressions, which enables more complex patterns.
+ Eg. grep -i "disk" system.log would search for the word disk in the system logs but it would ignore case of letters
+
+19. head- gets the first 10 of logs files or any file
+
+20. tail- gets the last updated log files or any files
+Eg. tail -f /var/log/syslog | grep "error" looks specifically for error log files and continually monitors logins, the -f follows the file 
+
+21. diff- finds the differences between two files line by line
+
+22. cmp- compares files bit by bit
+
+23. comm -compares sorted files
+
+24. sort - arranges alphabetically or numerically
+eg. sort unsorted.txt > sorted.txt
+
+25. export -sets or exports the environment variable.
+eg.export PATH=$PATH:/usr/local/bin
+
+26. zip - compresses files into a zip archive
+
+27. unzip- unzips files froma a zip archive
+
+28. ssh- used to securely execute commands, transfer files, and forward ports on a remote machine
+eg.ssh username@host
+
+29. service -used to start, stop, or restart system services
+eg service apache2 restart
+
+20. ps-  displays information about active processes
+
+31. kill and killall -kill sends a signal to a specific process, while killall sends a signal to all processes by name
+eg.kill 1234
+killall firefox
+
+32. df-monitors disk usage
+
+33. mount - helpful in forensics to mount a disk, essential in forensics to access filesystems of an evidence disk without altering the data
+eg. mount /dev/sda1 /mnt/forensic
+
+34. chmod - useful to change permissions
+eg.chmod 755 script.sh
+
+35. chown -change the ownership of files or directories
+
+36. ifconfig -configure, manage, and query network interface parameters
+
+
+37. traceroute- shows the route packets take to a network host,  used to diagnose network routing issues
+
+38. wget -used to download files from the internet
+
+39. ufw - a user-friendly frontend for managing iptables firewall rules
+eg.ufw allow from 192.168.1.1 to any port 22
+
+40. iptables-set up, maintain, and inspect the tables of IP packet filter rules
+eg.iptables -A INPUT -i eth0 -p tcp --dport 80 -j ACCEPT
+
+41. apt, pacman, yum, rpm - install and update, and manage software on machine
+
+42. sudo - allows you to act as root when your user doesn't have permissions 
+
+43. cal - a command-line utility that displays a calendar in the terminal
+
+44. alias - creates a shorthand for a longer command line, making it easier to remember and execute
+eg.alias ll='ls -l'
+
+45. dd - used to copy block-level data directly from one device to another, useful for making disk images or backups
+eg.dd if=/dev/sda of=/dev/sdb bs=512 , command clones one drive to another using a block size of 512 bytes
+
+
+46. whereis -helps in finding the location of executables, source codes, and man pages within the system
+
+47. whatis -provides a quick summary of what a command does
+
+48. top - is used for monitoring system processes and their resource consumption like CPU and memory
+
+49. useradd- this extremely important if you are wanting to create a new user for your computer or virtual machine
+eg. sudo useradd username
+
+50. passwd -  is used to update a user's password. It's a critical security tool for managing user authentication
